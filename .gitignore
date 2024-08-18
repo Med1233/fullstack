@@ -32,12 +32,12 @@ pnpm-debug.log*
 /**/node_modules
 
 # next.js
-/front/.next/
-/front/out/
+/frontend/.next/
+/frontend/out/
 
 # vercel
-/front/.vercel
+/frontend/.vercel
 
 # typescript
-/front/*.tsbuildinfo
-/front/next-env.d.ts
+/frontend/*.tsbuildinfo
+/frontend/next-env.d.ts
