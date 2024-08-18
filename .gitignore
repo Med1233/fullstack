@@ -5,19 +5,14 @@
 # Logs
 logs
 *.log
-npm-debug.log*
 pnpm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
 
-
-# Tests
+# Test
 /**/coverage
 /**/.nyc_output
 
 # IDE - VSCode
-/**/ */.vscode/*
+/**/*/.vscode/*
 
 # dotenv environment variable files
 .env
@@ -37,12 +32,12 @@ lerna-debug.log*
 /**/node_modules
 
 # next.js
-/frontend/.next/
-/frontend/out/
+/front/.next/
+/front/out/
 
 # vercel
-/frontend/.vercel
+/front/.vercel
 
 # typescript
-/frontend/*.tsbuildinfo
-/frontend/next-env.d.ts
+/front/*.tsbuildinfo
+/front/next-env.d.ts
