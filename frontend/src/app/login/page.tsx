@@ -4,6 +4,8 @@ import { useState } from 'react';
 
 import { useRouter } from 'next/navigation';
 
+import { setToken } from '../utils/auth';
+
 const Page = (): JSX.Element => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -23,7 +25,7 @@ const Page = (): JSX.Element => {
 
       const data = await res.json();
 
-      localStorage.setItem('authToken', data.access_token);
+      setToken(data.access_token);
       router.push('/');
     } catch {
       setError('Invalid credentials');
