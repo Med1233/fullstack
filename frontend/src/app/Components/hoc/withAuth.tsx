@@ -3,14 +3,21 @@
 import { useEffect, useState } from 'react';
 
 import { useRouter } from 'next/navigation';
+import { useAtom } from 'jotai';
 
 import { clearToken, getToken } from '../../utils/auth';
+
+import { curretUserAtom } from '@/app/atoms';
 
 const withAuth = (WrappedComponent) => {
   return (props) => {
     const router = useRouter();
     const [isValid, setIsValid] = useState(false);
+    const [currentUser, setCurretUser] = useAtom(curretUserAtom);
+
     const token = getToken();
+
+    console.log('currentUser : ', currentUser);
 
     useEffect(() => {
       if (!token) {
@@ -25,10 +32,13 @@ const withAuth = (WrappedComponent) => {
         })
           .then((response) => {
             if (response.status === 200) {
-              setIsValid(true);
-            } else {
-              throw new Error('Invalid token');
+              return response.json();
             }
+            throw new Error('Invalid token');
+          })
+          .then((data) => {
+            setIsValid(true);
+            setCurretUser(data);
           })
           .catch((error) => {
             clearToken();

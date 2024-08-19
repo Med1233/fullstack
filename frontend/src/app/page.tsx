@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   title: 'Home'
 };
 
-const App = (): JSX.Element => <main>main page</main>;
+const App = (): JSX.Element => {
+  return <main>main page</main>;
+};
 
 export default App;

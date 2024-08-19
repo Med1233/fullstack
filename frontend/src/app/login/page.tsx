@@ -14,6 +14,7 @@ const Page = (): JSX.Element => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
       const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/login`, {
         body: JSON.stringify({ password, username }),
