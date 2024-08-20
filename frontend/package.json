@@ -9,14 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^5.16.7",
+    "@mui/material": "^5.16.7",
     "jotai": "^2.9.3",
     "next": "14.2.5",
+    "ramda": "^0.30.1",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
     "@centreon/js-config": "^24.7.4",
     "@types/node": "^20",
+    "@types/ramda": "^0.30.1",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@typescript-eslint/eslint-plugin": "^7.16.1",
