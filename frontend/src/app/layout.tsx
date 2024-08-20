@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google';
 
 import './globals.css';
 import styles from './layout.module.css';
+import Navbar from './Components/Navbar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -12,7 +13,7 @@ const Layout = ({
 }>): JSX.Element => (
   <html lang="en">
     <body className={`${inter.className} ${styles.body}`}>
-      <nav className={styles.navbar}>navber</nav>
+      <Navbar />
       <main className={styles.main}>{children}</main>
       <footer className={styles.footer}>footer</footer>
     </body>

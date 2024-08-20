@@ -3,12 +3,6 @@
     flex-direction: column;
 }
 
-.navbar{
-    height: 5rem;
-    border-bottom: 1px solid black;
-
-}
-
 .main{
     flex: 1;
 }

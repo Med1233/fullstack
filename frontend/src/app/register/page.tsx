@@ -27,7 +27,7 @@ export default () => {
 
       // Handle successful registration, e.g., redirect to login page
       router.push('/login');
-    } catch (error) {
+    } catch {
       setError('Registration failed');
     }
   };
